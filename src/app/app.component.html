@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="col-xs-8 col-xs-offset-2 search-box">
+    <h2>Find something</h2>
+    <div class="input-group">
+      <input
+        (keyup)="showResult($event)"
+        type="text"
+        class="form-control"
+        placeholder="Search"
+      />
+    </div>
+  </div>
+  <div class="container" *ngIf="show">
+    <ul class="list-group first" *ngFor="let data of dataArr">
+      <li class="list-group-item first">{{ data }}</li>
+    </ul>
+  </div>
+  <div class="container">
+    <ul class="list-group result">
+    </ul>
+  </div>
+</div>
